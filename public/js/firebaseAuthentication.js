@@ -7,6 +7,7 @@ function signUser(){
         .then((user) => {
             alert('Sucesso no cadastro do usuário');
             console.log('Sucesso no cadastro do usuário');
+            window.location = '/login';
     })
         .catch((error) => {
             alert('Erro no cadastro do usuário: ' + error);
