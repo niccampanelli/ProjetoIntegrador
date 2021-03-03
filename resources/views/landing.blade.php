@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="{{ URL::asset('css/main.css') }}" rel="stylesheet" type="text/css">
-        <link href="{{ URL::asset('css/landing.css') }}" rel="stylesheet" type="text/css">
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <link href="css/landing.css" rel="stylesheet" type="text/css">
         <title>ProjetoIntegrador</title>
         <script src="js/firebaseAuthentication.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
