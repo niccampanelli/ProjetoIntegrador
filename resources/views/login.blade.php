@@ -31,17 +31,24 @@
             firebase.initializeApp(firebaseConfig);
             </script>
 
-            <section class="loginCard">
-                <h1 class="loginTitle">Entrar na sua conta</h1>
-                <h1 class="loginTitle">Erro</h1>
-                <h1 class="inputTitle">Email</h1>
-                    <input class="defaultInput" id="emailInput" type="email" placeholder="exemplo@email.com"/>
-                <h1 class="inputTitle">Senha</h1>
-                    <input class="defaultInput" id="passwordInput" type="password" placeholder="Digite sua senha"/>
-                <div class="buttonPlace">
-                    <button class="defaultButton" onClick="logUser()">Entrar</button>
-                </div>
-                <h1 class="switchText">Ainda não tem uma conta? <a href="/cadastro">Crie uma conta.</a></h1>
+            <section class="header">
+                <a href="/"><h1 class="title">Projeto Integrador</h1></a>
+                <div class="options"></div>
+                <a href="login"><button>Login</button></a>
             </section>
+            <div class="centerSection">
+                <section class="loginCard">
+                    <h1 class="loginTitle">Entrar na sua conta</h1>
+                    <h1 class="inputTitle">Email</h1>
+                        <input class="defaultInput" id="emailInput" type="email" placeholder="exemplo@email.com"/>
+                    <h1 class="inputTitle">Senha</h1>
+                        <input class="defaultInput" id="passwordInput" type="password" placeholder="Digite sua senha"/>
+                    <h1 class="errorMessage" id="errormsg"></h1>
+                    <div class="buttonPlace">
+                        <button class="defaultButton" onClick="logUser()">Entrar</button>
+                    </div>
+                    <h1 class="switchText">Ainda não tem uma conta? <a href="/cadastro">Crie uma conta.</a></h1>
+                </section>
+            </div>
     </body>
 </html>

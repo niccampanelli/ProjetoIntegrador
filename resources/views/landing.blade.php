@@ -31,8 +31,9 @@
             firebase.initializeApp(firebaseConfig);
             </script>
 
-        <section class="titleSection">
+        <section class="header">
             <h1 class="title">Projeto Integrador</h1>
+            <div class="options"></div>
             <a href="login"><button>Login</button></a>
         </section>
     </body>
