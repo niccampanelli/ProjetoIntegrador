@@ -25,15 +25,18 @@
             </script>
         <header class="header">
             <h1 class="title">Projeto Integrador</h1>
-            <div class="options"></div>
+            <div class="options">
+                <form class="searchForm" action="/search" method="POST" role="search">
+                    {{ csrf_field() }}
+                    <div class="searchInputDiv">
+                        <input class="searchInput" name='search_input' type="search" placeholder="Pesquise títulos de livros aqui..."/>
+                        <button class="searchButton" type="submit">Pesquisar</button>
+                    </div>
+                </form>
+            </div>
             <a href="login"><button>Login</button></a>
         </header>
-        <section>
-            <form action="/search" method="POST" role="search">
-                {{ csrf_field() }}
-                <input name='search_input' type="search"/>
-                <button type="submit">Pesquisar</button>
-            </form>
+        <section class="centerSection">
         </section>
     </body>
 </html>
