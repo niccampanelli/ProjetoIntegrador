@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,5 @@ Route::get('/login', function () {
 Route::get('/cadastro', function () {
     return view('cadastro');
 });
+
+Route::post('/search', [SearchController::class, 'makeSearch']);
