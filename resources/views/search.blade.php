@@ -37,6 +37,9 @@
             <a href="login"><button>Login</button></a>
         </header>
         <section class="centerSection">
+            @isset($query)
+                <h2>Livros encontrados com a busca: {{$query}} </h2>
+            @endisset
         </section>
     </body>
 </html>

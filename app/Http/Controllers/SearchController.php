@@ -8,6 +8,6 @@ class SearchController extends Controller
 {
     public function makeSearch(Request $request){
         $q = $request->input('search_input');
-        return $q;
+        return view('search')->with('query', $q);
     }
 }
