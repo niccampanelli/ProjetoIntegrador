@@ -41,10 +41,10 @@
                 @isset($data)
                     <h2>Livros encontrados com a pesquisa: "{{$data['query']}}" </h2>
                     <div class="searchList">
-                        @foreach ($data['book'] as $b)
+                        @foreach ($data['books'] as $b)
                             <div class='searchItem'>
-                                <span class="searchItemName">{{$b['name']}}</span>
-                                <span class="searchItemAuthor">{{$b['author']}}</span>
+                                <span class="searchItemName">{{$b->title}}</span>
+                                <span class="searchItemAuthor">{{$b->author}}</span>
                             </div>
                         @endforeach
                     </div>

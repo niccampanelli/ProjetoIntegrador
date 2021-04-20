@@ -10,15 +10,9 @@
             box-sizing: border-box;
 }
 
-body{
-    height: 100vh;
-    width: 100vw;
-}
-
 .header{
     background-color: #383a41;
     height: 8%;
-    width: 100%;
     display: grid;
     grid-template-columns: 20% 60% 20%;
     align-items: center;
