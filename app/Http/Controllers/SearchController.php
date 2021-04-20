@@ -8,6 +8,19 @@ class SearchController extends Controller
 {
     public function makeSearch(Request $request){
         $q = $request->input('search_input');
-        return view('search')->with('query', $q);
+        $book = [
+            ['name' => 'A Cabana', 'author' => 'William Paul Young'],
+            ['name' => 'A Cabana 2', 'author' => 'William Paul Young'],
+            ['name' => 'A Cabana 3', 'author' => 'William Paul Young'],
+            ['name' => 'A Cabana 4', 'author' => 'William Paul Young'],
+            ['name' => 'A Cabana 4', 'author' => 'William Paul Young']
+
+        ];
+        $data = [
+            'query' => $q,
+            'book' => $book
+        ];
+
+        return view('search')->with('data', $data);
     }
 }

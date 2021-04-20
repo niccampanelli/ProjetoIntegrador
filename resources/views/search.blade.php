@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/main.css" rel="stylesheet" type="text/css">
-        <link href="css/landing.css" rel="stylesheet" type="text/css">
+        <link href="css/search.css" rel="stylesheet" type="text/css">
         <title>Projeto Integrador</title>
         <script src="js/firebaseAuthentication.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -37,9 +37,19 @@
             <a href="login"><button>Login</button></a>
         </header>
         <section class="centerSection">
-            @isset($query)
-                <h2>Livros encontrados com a busca: {{$query}} </h2>
-            @endisset
+            <div class="searchContainer">
+                @isset($data)
+                    <h2>Livros encontrados com a pesquisa: "{{$data['query']}}" </h2>
+                    <div class="searchList">
+                        @foreach ($data['book'] as $b)
+                            <div class='searchItem'>
+                                <span class="searchItemName">{{$b['name']}}</span>
+                                <span class="searchItemAuthor">{{$b['author']}}</span>
+                            </div>
+                        @endforeach
+                    </div>
+                @endisset
+            </div>
         </section>
     </body>
 </html>
