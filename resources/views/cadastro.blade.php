@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body class="container">
+            <script src="https://kit.fontawesome.com/d647f9fbfb.js" crossorigin="anonymous"></script>
             <!-- The core Firebase JS SDK is always required and must be listed first -->
             <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
             <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
@@ -31,12 +32,21 @@
             firebase.initializeApp(firebaseConfig);
             </script>
 
-            <section class="header">
-                <a href="/"><h1 class="title">Projeto Integrador</h1></a>
-                <div class="options"></div>
-                <a href="login"><button>Login</button></a>
-            </section>
-            
+            <header class="header">
+                <a href="/" class="title">Projeto Integrador</a>
+                <div class="headerMiddle">
+                    <form class="searchForm" action="/search" method="POST" role="search">
+                        @csrf
+                        <div class="searchInputDiv">
+                            <input class="searchInput" name='search_input' type="search" placeholder="Pesquise títulos de livros aqui..."/>
+                            <button class="searchButton" type="submit"><i class="fas fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="headerLast">
+                    <a href="login" class="loginButton"><i class="far fa-user-circle"></i> Logar ou Cadastrar</a>
+                </div>
+            </header>
             <div class="centerSection">
                 <section class="loginCard">
                     <h1 class="loginTitle">Cadastrar uma nova conta</h1>

@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body class="container">
+            <script src="https://kit.fontawesome.com/d647f9fbfb.js" crossorigin="anonymous"></script>
             <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
             <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
             <script>
@@ -25,16 +26,18 @@
             </script>
         <header class="header">
             <h1 class="title">Projeto Integrador</h1>
-            <div class="options">
+            <div class="headerMiddle">
                 <form class="searchForm" action="/search" method="POST" role="search">
                     @csrf
                     <div class="searchInputDiv">
                         <input class="searchInput" name='search_input' type="search" placeholder="Pesquise títulos de livros aqui..."/>
-                        <button class="searchButton" type="submit">Pesquisar</button>
+                        <button class="searchButton" type="submit"><i class="fas fa-search"></i></button>
                     </div>
                 </form>
             </div>
-            <a href="login"><button>Login</button></a>
+            <div class="headerLast">
+                <a href="login" class="loginButton"><i class="far fa-user-circle"></i> Logar ou Cadastrar</a>
+            </div>
         </header>
         <section class="centerSection">
         </section>

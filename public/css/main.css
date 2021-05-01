@@ -12,15 +12,25 @@
 
 .header{
     background-color: #383a41;
-    height: 8%;
+    height: 70px;
     display: grid;
     grid-template-columns: 20% 60% 20%;
     align-items: center;
+    padding: 12px 10px;
 }
 
 .title{
     padding: 0 0 0 20px;
     font-size: 20px;
+}
+
+.headerMiddle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
 }
 
 .searchForm{
@@ -30,16 +40,25 @@
 }
 
 .searchInputDiv{
-    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     background-color: #4a4e57;
     border-radius: 5px 5px 0 0;
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 90% 10%;
     width: 100%;
     height: 100%;
+    transition: all .1s;
+}
+
+.searchInputDiv:hover{
+    background-color: #55575e;
 }
 
 .searchInput{
+    padding: 0 15px;
     background-color: transparent;
     color: #ffffff;
     font-size: 15px;
@@ -49,6 +68,49 @@
 
 .searchInput::placeholder{
     color: #aaaaaa;
+}
+
+.searchButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: #cf0000;
+    border-radius: 0px 5px 5px 0;
+    transition: all .1s;
+}
+
+.searchButton i{
+    font-size: 90%;
+    transition: all .1s;
+}
+
+.searchButton:hover{
+    background-color: #ff0000;
+}
+
+.searchButton:hover > i{
+    font-size: 110%;
+}
+
+.searchButton:active{
+    background-color: #cf0000;
+}
+
+.searchButton:active > i{
+    font-size: 80%;
+}
+
+.headerLast{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
 }
 
 .container{
@@ -74,6 +136,7 @@
     margin-bottom: 20px;
     padding: 0 15px;
     font-size: 15px;
+    transition: all .1s;
 }
 
 .defaultInput::placeholder{
@@ -95,8 +158,44 @@
     background-color: red;
     border-radius: 5px;
     color: #fff;
+    transition: all .1s;
 }
 
 .defaultButton:hover{
     background-color: #cf0000;
+    font-size: 110%;
+}
+
+.defaultButton:active{
+    background-color: #ff3434;
+    font-size: 80%;
+}
+
+.loginButton{
+    border-radius: 5px;
+    background-color: #4b4d55;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 900;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all .1s;
+}
+
+.loginButton i{
+    font-size: 25px;
+}
+
+.loginButton:hover{
+    background-color: #55575e;
+    font-size: 105%;
+}
+
+.loginButton:active{
+    background-color: #6b6c72;
+    font-size: 90%;
 }
