@@ -40,6 +40,36 @@
             </div>
         </header>
         <section class="centerSection">
+            <div class="searchContainer">
+                <h2>Livros encontrados com a pesquisa: "asdas" </h2>
+                <div class="searchList">
+                    <div class='searchItem'>
+                        <div class="searchItemIcon" style="background-color: {{'#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT)}}"><i class="fas fa-book"></i></div>
+                        <span class="searchItemName">Lorem ipsum dolor sit.</span>
+                        <span class="searchItemAuthor">Lorem, ipsum.</span>
+                    </div>
+                    <div class='searchItem'>
+                        <div class="searchItemIcon" style="background-color: {{'#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT)}}"><i class="fas fa-book"></i></div>
+                        <span class="searchItemName">Lorem ipsum dolor sit.</span>
+                        <span class="searchItemAuthor">Lorem, ipsum.</span>
+                    </div>
+                    <div class='searchItem'>
+                        <div class="searchItemIcon" style="background-color: {{'#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT)}}"><i class="fas fa-book"></i></div>
+                        <span class="searchItemName">Lorem ipsum dolor sit.</span>
+                        <span class="searchItemAuthor">Lorem, ipsum.</span>
+                    </div>
+                    <div class='searchItem'>
+                        <div class="searchItemIcon" style="background-color: {{'#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT)}}"><i class="fas fa-book"></i></div>
+                        <span class="searchItemName">Lorem ipsum dolor sit.</span>
+                        <span class="searchItemAuthor">Lorem, ipsum.</span>
+                    </div>
+                    <div class='searchItem'>
+                        <div class="searchItemIcon" style="background-color: {{'#' . str_pad(dechex(mt_rand(0, 0xFF0000)), 6, '0', STR_PAD_LEFT)}}"><i class="fas fa-book"></i></div>
+                        <span class="searchItemName">Lorem ipsum dolor sit.</span>
+                        <span class="searchItemAuthor">Lorem, ipsum.</span>
+                    </div>
+                </div>
+            </div>
         </section>
     </body>
 </html>
