@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/main.css" rel="stylesheet" type="text/css">
         <link href="css/search.css" rel="stylesheet" type="text/css">
-        <title>Projeto Integrador</title>
+        <title>Projeto Integrador - {{$data['query']}} </title>
         <script src="js/firebaseAuthentication.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
     </head>
     <body class="container">
             <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
@@ -26,8 +26,7 @@
         <header class="header">
             <h1 class="title">Projeto Integrador</h1>
             <div class="headerMiddle">
-                <form class="searchForm" action="/search" method="POST" role="search">
-                    @csrf
+                <form class="searchForm" action="/search" method="GET" role="search">
                     <div class="searchInputDiv">
                         <input class="searchInput" name='search_input' type="search" placeholder="Pesquise títulos de livros aqui..."/>
                         <button class="searchButton" type="submit"><i class="fas fa-search"></i></button>
@@ -41,19 +40,30 @@
         <section class="centerSection">
             <div class="searchContainer">
                 @isset($data)
-                    <h2>Livros encontrados com a pesquisa: "{{$data['query']}}" </h2>
+                    <div class="searchHeader">
+                        @if (isset($data['query']))
+                            <h2>Livros encontrados com a pesquisa: "{{$data['query']}}" </h2>
+                        @else
+                            <h2>Livros cadastrados na plataforma.</h2>
+                        @endif
+                        <div class="searchOptions">
+                            <button class="searchOrderby"><i class="fas fa-sort-amount-down"></i> Ordenar</button>
+                        </div>
+                    </div>
                     <div class="searchList">
                         @foreach ($data['books'] as $b)
                             <div class='searchItem'>
                                 <div class="searchItemIcon" style="background-color: {{'#' . str_pad(dechex(mt_rand(0x555555, 0xDDDDDD)), 6, '0', STR_PAD_LEFT)}}"><i style="color: {{'#' . str_pad(dechex(mt_rand(0xAAAAAA, 0xFFFFFF)), 6, '0', STR_PAD_LEFT)}}" class="fas fa-book"></i></div>
                                 <span class="searchItemName">{{$b->title}}</span>
-                                <span class="searchItemAuthor">{{$b->author}}</span>
+                                <span class="searchItemAuthor">{{ \Illuminate\Support\Str::limit($b->author, 50, $end='...') }}</span>
                             </div>
                         @endforeach
                     </div>
+                    {{$data['books']->links('vendor.pagination.default')}}
                 @endisset
             </div>
         </section>
+        <link async href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
         <script async src="https://kit.fontawesome.com/d647f9fbfb.js" crossorigin="anonymous"></script>
     </body>
 </html>

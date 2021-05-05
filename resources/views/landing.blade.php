@@ -4,14 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Projeto Integrador</title>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body class="container">
         <header class="header">
             <h1 class="title">Projeto Integrador</h1>
             <div class="headerMiddle">
-                <form class="searchForm" action="/search" method="POST" role="search">
-                    @csrf
+                <form class="searchForm" action="/search" method="GET" role="search">
                     <div class="searchInputDiv">
                         <input class="searchInput" name='search_input' type="search" placeholder="Pesquise títulos de livros aqui..."/>
                         <button class="searchButton" type="submit"><i class="fas fa-search"></i></button>
