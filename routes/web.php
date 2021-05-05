@@ -27,4 +27,4 @@ Route::get('/cadastro', function () {
     return view('cadastro');
 });
 
-Route::post('/search', [SearchController::class, 'makeSearch']);
+Route::get('/search', [SearchController::class, 'makeSearch']);

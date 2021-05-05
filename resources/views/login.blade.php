@@ -7,7 +7,6 @@
         <link href="css/login.css" rel="stylesheet" type="text/css">
         <title>ProjetoIntegrador</title>
         <script src="js/firebaseAuthentication.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body class="container">
             <script src="https://kit.fontawesome.com/d647f9fbfb.js" crossorigin="anonymous"></script>

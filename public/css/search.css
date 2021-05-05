@@ -10,12 +10,216 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    .searchHeader{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .searchOptions{
+        display: flex;
+        flex-direction: space-between;
+    }
+
+    .searchOrderby{
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 10px 20px;
+        background-color: #383a41;
+        color: #ffffff;
+        font-weight: 900;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-shadow: 0 1vh 2vh .5vh #00000028;
+        transition: all .1s;
+    }
+
+    .searchOrderby i{
+        color: #ff3b3b;
+        font-size: 20px;
+        margin-right: 10px;
+        transition: all .1s;
+    }
+
+    .searchOrderby:hover{
+        background-color: #474950;
+        color: #ff3b3b;
+    }
+    
+    .searchOrderby:active{
+        background-color: #383a41;
+    }
+    
+    .pagination{
+        margin: 20px 0;
+        padding: 0 200px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+    }
+
+    .pagination #arrow{
+        color: red;
+        font-size: 30px;
+    }
+
+    .active span{
+        color: red !important;
+        font-weight: 900;
+    }
+
+    .pagination li a{
+        font-weight: 900;
+        text-decoration: none;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    .searchHeader{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .searchOptions{
+        display: flex;
+        flex-direction: space-between;
+    }
+
+    .searchOrderby{
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 10px 20px;
+        background-color: #383a41;
+        color: #ffffff;
+        font-weight: 900;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-shadow: 0 1vh 2vh .5vh #00000028;
+        transition: all .1s;
+    }
+
+    .searchOrderby i{
+        color: #ff3b3b;
+        font-size: 20px;
+        margin-right: 10px;
+        transition: all .1s;
+    }
+
+    .searchOrderby:hover{
+        background-color: #474950;
+        color: #ff3b3b;
+    }
+    
+    .searchOrderby:active{
+        background-color: #383a41;
+    }
+    
+    .pagination{
+        margin: 20px 0;
+        padding: 0 200px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+    }
+
+    .pagination #arrow{
+        color: red;
+        font-size: 30px;
+    }
+
+    .active span{
+        color: red !important;
+        font-weight: 900;
+    }
+
+    .pagination li a{
+        font-weight: 900;
+        text-decoration: none;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    .searchHeader{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .searchOptions{
+        display: flex;
+        flex-direction: space-between;
+    }
+
+    .searchOrderby{
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 10px 20px;
+        background-color: #383a41;
+        color: #ffffff;
+        font-weight: 900;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-shadow: 0 1vh 2vh .5vh #00000028;
+        transition: all .1s;
+    }
+
+    .searchOrderby i{
+        color: #ff3b3b;
+        font-size: 20px;
+        margin-right: 10px;
+        transition: all .1s;
+    }
+
+    .searchOrderby:hover{
+        background-color: #474950;
+        color: #ff3b3b;
+    }
+
+    .searchOrderby:active{
+        background-color: #383a41;
+    }
+    
+    .pagination{
+        margin: 20px 0;
+        padding: 0 200px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+    }
+
+    .pagination #arrow{
+        color: red;
+        font-size: 30px;
+    }
+
+    .active span{
+        color: red !important;
+        font-weight: 900;
+    }
+
+    .pagination li a{
+        font-weight: 900;
+        text-decoration: none;
+    }
 }

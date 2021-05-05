@@ -9,6 +9,8 @@ class SearchController extends Controller
 {
     public function makeSearch(Request $request){
         $q = $request->input('search_input');
+        $sort = $request->input('sort');
+        $dir = $request->input('dir');
 
         $bookArray = DB::table('biblio')
                             ->where('title', 'like', '%'. $q .'%')
@@ -19,15 +21,8 @@ class SearchController extends Controller
                             ->orWhere('topic3', 'like', '%'. $q .'%')
                             ->orWhere('topic4', 'like', '%'. $q .'%')
                             ->orWhere('topic5', 'like', '%'. $q .'%')
-                            ->get();
-
-        $book = [
-            ['name' => 'A Cabana', 'author' => 'William Paul Young'],
-            ['name' => 'A Cabana 2', 'author' => 'William Paul Young'],
-            ['name' => 'A Cabana 3', 'author' => 'William Paul Young'],
-            ['name' => 'A Cabana 4', 'author' => 'William Paul Young'],
-            ['name' => 'A Cabana 4', 'author' => 'William Paul Young']
-        ];
+                            ->paginate(25)
+                            ->appends(['search_input' => $q]);
 
         $data = [
             'query' => $q,
