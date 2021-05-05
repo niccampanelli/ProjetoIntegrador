@@ -49,13 +49,13 @@
                             <h2>Livros cadastrados na plataforma.</h2>
                         @endif
                         <div class="searchOptions">
-                            <button class="searchOrderby"><i class="fas fa-sort-amount-down"></i> Ordenar</button>
+                            <button class="searchOrderby"><i  class="fas fa-sort-amount-down"></i> Ordenar</button>
                         </div>
                     </div>
                     <div class="searchList">
                         @foreach ($data['books'] as $b)
-                            <div class='searchItem'>
-                                <div class="searchItemIcon"><i  class="fas fa-book"></i></div>
+                            <div  class='searchItem'>
+                                <div class="searchItemIcon" style="background-color:{{'#' . str_pad(dechex(mt_rand(0x555555, 0xDDDDDD)), 6, '0', STR_PAD_LEFT)}}" ><i style="color: {{'#' . str_pad(dechex(mt_rand(0xAAAAAA, 0xFFFFFF)), 6, '0', STR_PAD_LEFT)}}"  class="fas fa-book"></i></div>
                                 <span class="searchItemName">{{$b->title}}</span>
                                 <span class="searchItemAuthor">{{ \Illuminate\Support\Str::limit($b->author, 50, $end='...') }}</span>
                             </div>
@@ -71,6 +71,6 @@
 </html>
 
 /**
- style="background-color:{{'#' . str_pad(dechex(mt_rand(0x555555, 0xDDDDDD)), 6, '0', STR_PAD_LEFT)}}"
- style="color: {{'#' . str_pad(dechex(mt_rand(0xAAAAAA, 0xFFFFFF)), 6, '0', STR_PAD_LEFT)}}"
+ 
+ 
 */

@@ -283,20 +283,17 @@
     }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 550px) {
     .title {
         display: none;
     }
     .header {
         grid-template-columns: 70% 30%;
     }
-    .iconlogin {
-        display: none;
-    }
     .searchInputDiv {
         grid-template-columns: 70% 25%;
     }
     .searchList {
-        grid-template-columns: 100%;
+        grid-template-columns: 80%;
     }
 }
