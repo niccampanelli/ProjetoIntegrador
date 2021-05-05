@@ -207,11 +207,13 @@
 .searchList{
     display: grid;
     grid-template-columns: repeat(5, 19%);
-    gap: 5% 1%;
+    grid-template-rows: 360px;
+    gap: 20px 20px;
     padding: 5% 1%;
 }
 
 .searchItem{
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -220,6 +222,23 @@
     padding: 28px;
     border-radius: 10px;
     box-shadow: 0 1vh 2vh .5vh #00000028;
+    transition: all .1s;
+}
+
+.searchItem:hover{
+    background-color: #474950;
+}
+
+.searchItem:hover > .searchItemIcon i{
+    font-size: 120px;
+}
+
+.searchItem:active{
+    background-color: #383a41;
+}
+
+.searchItem:active > .searchItemIcon i{
+    font-size: 80px;
 }
 
 .searchItemIcon{
@@ -236,15 +255,17 @@
 
 .searchItemIcon i{
     font-size: 100px;
-    color: #ffffff;
-    opacity: .5;
+    transition: all .1s;
 }
 
 .searchItemName{
-    width: 100%;
+    width: 193px;
     font-size: 20px;
     font-weight: 900;
     text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .searchItemAuthor{

@@ -25,16 +25,18 @@
             </script>
         <header class="header">
             <h1 class="title">Projeto Integrador</h1>
-            <div class="options">
+            <div class="headerMiddle">
                 <form class="searchForm" action="/search" method="POST" role="search">
                     @csrf
                     <div class="searchInputDiv">
                         <input class="searchInput" name='search_input' type="search" placeholder="Pesquise títulos de livros aqui..."/>
-                        <button class="searchButton" type="submit">Pesquisar</button>
+                        <button class="searchButton" type="submit"><i class="fas fa-search"></i></button>
                     </div>
                 </form>
             </div>
-            <a href="login"><button>Login</button></a>
+            <div class="headerLast">
+                <a href="login" class="loginButton"><i class="far fa-user-circle"></i> Logar ou Cadastrar</a>
+            </div>
         </header>
         <section class="centerSection">
             <div class="searchContainer">
@@ -43,6 +45,7 @@
                     <div class="searchList">
                         @foreach ($data['books'] as $b)
                             <div class='searchItem'>
+                                <div class="searchItemIcon" style="background-color: {{'#' . str_pad(dechex(mt_rand(0x555555, 0xDDDDDD)), 6, '0', STR_PAD_LEFT)}}"><i style="color: {{'#' . str_pad(dechex(mt_rand(0xAAAAAA, 0xFFFFFF)), 6, '0', STR_PAD_LEFT)}}" class="fas fa-book"></i></div>
                                 <span class="searchItemName">{{$b->title}}</span>
                                 <span class="searchItemAuthor">{{$b->author}}</span>
                             </div>
@@ -51,5 +54,6 @@
                 @endisset
             </div>
         </section>
+        <script async src="https://kit.fontawesome.com/d647f9fbfb.js" crossorigin="anonymous"></script>
     </body>
 </html>
