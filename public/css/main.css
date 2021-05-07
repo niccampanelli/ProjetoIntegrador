@@ -28,7 +28,281 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    .header{
+        width: 100%;
+        position: fixed;
+        background-color: #383a41;
+        height: 70px;
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        align-items: center;
+        padding: 12px 20px;
+    }
+    
+    .title{
+        padding: 0 0 0 20px;
+        font-size: 16px;
+    }
+    
+    .headerMiddle{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .searchForm{
+        padding: 0 20px;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .searchInputDiv{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #4a4e57;
+        border-radius: 5px 5px 0 0;
+        display: grid;
+        grid-template-columns: 90% 10%;
+        width: 100%;
+        height: 100%;
+        transition: all .1s;
+    }
+    
+    .searchInputDiv:hover{
+        background-color: #55575e;
+    }
+    
+    .searchInput{
+        padding: 0 15px;
+        background-color: transparent;
+        color: #ffffff;
+        font-size: 15px;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .searchInput::placeholder{
+        color: #aaaaaa;
+    }
+    
+    .searchButton{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        background-color: #cf0000;
+        border-radius: 0px 5px 5px 0;
+        transition: all .1s;
+    }
+    
+    .searchButton i{
+        font-size: 90%;
+        transition: all .1s;
+    }
+    
+    .searchButton:hover{
+        background-color: #ff0000;
+    }
+    
+    .searchButton:hover > i{
+        font-size: 110%;
+    }
+    
+    .searchButton:active{
+        background-color: #cf0000;
+    }
+    
+    .searchButton:active > i{
+        font-size: 80%;
+    }
+    
+    .headerLast{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .container{
+        background-color: #2d2f35;
+    }
+    
+    .centerSection{
+        padding-top: 70px;
+        width: 100%;
+        height: 92%;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .defaultInput{
+        width: 100%;
+        height: 45px;
+        background-color: #4a4e57;
+        color: #ffffff;
+        border-radius: 5px 5px 0 0;
+        border-bottom: 4px solid red;
+        margin-bottom: 20px;
+        padding: 0 15px;
+        font-size: 15px;
+        transition: all .1s;
+    }
+    
+    .defaultInput::placeholder{
+        color: #aaaaaa;
+    }
+    
+    .defaultInput:hover{
+        background-color: #61646b;
+    }
+    
+    .defaultInput:focus{
+        background-color: #61646b;
+    }
+    
+    .defaultButton{
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        border-radius: 5px;
+        color: #fff;
+        transition: all .1s;
+    }
+    
+    .defaultButton:hover{
+        background-color: #cf0000;
+        font-size: 110%;
+    }
+    
+    .defaultButton:active{
+        background-color: #ff3434;
+        font-size: 80%;
+    }
+    
+    .loginButton{
+        border-radius: 5px;
+        background-color: #4b4d55;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 900;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        transition: all .1s;
+    }
+    
+    .loginButton i{
+        font-size: 20px;
+    }
+    
+    .loginButton:hover{
+        background-color: #55575e;
+        font-size: 16px;
+    }
+    
+    .loginButton:active{
+        background-color: #6b6c72;
+        font-size: 14px;
+    }
+    
+    .searchContainer{
+        width: 100%;
+        height: 100%;
+        padding: 4vw 2vw 0px 2vw;
+    }
 
+    .searchContainer h2{
+        width: 100%;
+        text-align: left;
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+    
+    .searchList{
+        padding: 4vw 0;
+        display: grid;
+        grid-template-columns: repeat(2, 46.6vw);
+        grid-template-rows: 270px;
+        gap: 3vw 2vw;
+    }
+    
+    .searchItem{
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 270px;
+        background-color: #383a41;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 1vh 2vh .5vh #00000028;
+        transition: all .1s;
+    }
+    
+    .searchItem:hover{
+        background-color: #474950;
+    }
+    
+    .searchItem:hover > .searchItemIcon i{
+        font-size: 120px;
+    }
+    
+    .searchItem:active{
+        background-color: #383a41;
+    }
+    
+    .searchItem:active > .searchItemIcon i{
+        font-size: 80px;
+    }
+    
+    .searchItemIcon{
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #383a41;
+        margin-bottom: 20px;
+        width: 100%;
+        height: 160px;
+    }
+    
+    .searchItemIcon i{
+        font-size: 80px;
+        transition: all .1s;
+    }
+    
+    .searchItemName{
+        width: 100%;
+        font-size: 20px;
+        font-weight: 900;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .searchItemAuthor{
+        width: 100%;
+        font-size: 10px;
+        text-align: left;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -229,15 +503,18 @@
     .searchContainer{
         width: 100%;
         height: 100%;
-        padding: 100px 2vw 0px 2vw;
+        padding: 6vw 2vw 0px 2vw;
     }
 
     .searchContainer h2{
+        width: 100%;
+        text-align: left;
         font-size: 30px;
+        margin-bottom: 50px;
     }
     
     .searchList{
-        padding: 8vw 0;
+        padding: 4vw 0;
         display: grid;
         grid-template-columns: repeat(2, 46.6vw);
         grid-template-rows: 450px;
@@ -505,11 +782,18 @@
     .searchContainer{
         width: 100%;
         height: 100%;
-        padding: 2vw 2vw;
+        padding: 4vw 2vw;
     }
     
+    .searchContainer h2{
+        width: 100%;
+        text-align: left;
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+
     .searchList{
-        padding: 2vw 0;
+        padding: 0 0;
         display: grid;
         grid-template-columns: repeat(3, 31.4vw);
         grid-template-rows: 360px;
@@ -780,6 +1064,13 @@
         padding: 2vw 1vw;
     }
     
+    .searchContainer h2{
+        width: 100%;
+        text-align: left;
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+
     .searchList{
         padding: 2vw 0;
         display: grid;
@@ -1052,6 +1343,13 @@
         padding: 2vw 1vw;
     }
     
+    .searchContainer h2{
+        width: 100%;
+        text-align: left;
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+
     .searchList{
         padding: 2vw 0;
         display: grid;
