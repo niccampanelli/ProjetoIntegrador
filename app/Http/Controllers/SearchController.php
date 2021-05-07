@@ -12,7 +12,7 @@ class SearchController extends Controller
         $sort = $request->input('sort');
         $dir = $request->input('dir');
 
-        $bookArray = DB::table('biblio')
+        /*$bookArray = DB::table('biblio')
                             ->where('title', 'like', '%'. $q .'%')
                             ->orWhere('title_remainder', 'like', '%'. $q .'%')
                             ->orWhere('author', 'like', '%'. $q .'%')
@@ -22,11 +22,27 @@ class SearchController extends Controller
                             ->orWhere('topic4', 'like', '%'. $q .'%')
                             ->orWhere('topic5', 'like', '%'. $q .'%')
                             ->paginate(25)
-                            ->appends(['search_input' => $q]);
+                            ->appends(['search_input' => $q]);*/
+
+
+        $books = [
+            ['a' => 'a'],
+            ['a' => 'a'],
+            ['a' => 'a'],
+            ['a' => 'a'],
+            ['a' => 'a'],
+            ['a' => 'a'],
+            ['a' => 'a'],
+            ['a' => 'a'],
+            ['a' => 'a'],
+            ['a' => 'a'],
+            ['a' => 'a'],
+            ['a' => 'a'],
+        ];
 
         $data = [
             'query' => $q,
-            'books' => $bookArray
+            'books' => $books
         ];
 
         return view('search')->with('data', $data);

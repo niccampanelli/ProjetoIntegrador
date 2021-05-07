@@ -56,12 +56,12 @@
                         @foreach ($data['books'] as $b)
                             <div  class='searchItem'>
                                 <div class="searchItemIcon" style="background-color:{{'#' . str_pad(dechex(mt_rand(0x555555, 0xDDDDDD)), 6, '0', STR_PAD_LEFT)}}" ><i style="color: {{'#' . str_pad(dechex(mt_rand(0xAAAAAA, 0xFFFFFF)), 6, '0', STR_PAD_LEFT)}}"  class="fas fa-book"></i></div>
-                                <span class="searchItemName">{{$b->title}}</span>
-                                <span class="searchItemAuthor">{{ \Illuminate\Support\Str::limit($b->author, 50, $end='...') }}</span>
+                                <span class="searchItemName">{{--{{$b->title}}--}} Lorem ipsum dolor sit amet.</span>
+                                <span class="searchItemAuthor">{{--{{ \Illuminate\Support\Str::limit($b->author, 50, $end='...') }}--}} Lorem ipsum dolor sit amet consectetur.</span>
                             </div>
                         @endforeach
                     </div>
-                    {{$data['books']->links('vendor.pagination.default')}}
+                    {{--{{$data['books']->links('vendor.pagination.default')}--}}
                 @endisset
             </div>
         </section>
@@ -69,8 +69,3 @@
         <script async src="https://kit.fontawesome.com/d647f9fbfb.js" crossorigin="anonymous"></script>
     </body>
 </html>
-
-/**
- 
- 
-*/
