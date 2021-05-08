@@ -190,7 +190,7 @@
     
     .pagination{
         margin: 20px 0;
-        padding: 0 200px;
+        padding: 0 1vw;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -409,7 +409,7 @@
 
     .pagination{
         margin: 20px 0;
-        padding: 0 200px;
+        padding: 0 4vw;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -623,7 +623,7 @@
     
     .pagination{
         margin: 20px 0;
-        padding: 0 200px;
+        padding: 0 10vw;
         width: 100%;
         display: flex;
         flex-direction: row;
