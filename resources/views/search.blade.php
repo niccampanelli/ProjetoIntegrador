@@ -34,9 +34,7 @@
                 </form>
             </div>
             <div class="headerLast">
-                <a href="login" class="loginButton">
-                    <i class="far fa-user-circle iconlogin "></i> 
-                    Logar ou Cadastrar</a>
+                <a href="login" class="loginButton"><i class="far fa-user-circle iconlogin "></i><span>Logar ou Cadastrar</span></a>
             </div>
         </header>
         <section class="centerSection">

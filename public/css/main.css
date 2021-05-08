@@ -35,14 +35,14 @@
         background-color: #383a41;
         height: 70px;
         display: grid;
-        grid-template-columns: 20% 60% 20%;
+        grid-template-columns: 15% 70% 15%;
         align-items: center;
-        padding: 12px 20px;
+        padding: 12px 10px;
     }
     
     .title{
-        padding: 0 0 0 20px;
-        font-size: 16px;
+        padding: 0 0 0 0;
+        font-size: 10px;
     }
     
     .headerMiddle{
@@ -55,7 +55,7 @@
     }
     
     .searchForm{
-        padding: 0 20px;
+        padding: 0 5px;
         width: 100%;
         height: 100%;
     }
@@ -68,7 +68,7 @@
         background-color: #4a4e57;
         border-radius: 5px 5px 0 0;
         display: grid;
-        grid-template-columns: 90% 10%;
+        grid-template-columns: 80% 20%;
         width: 100%;
         height: 100%;
         transition: all .1s;
@@ -79,7 +79,7 @@
     }
     
     .searchInput{
-        padding: 0 15px;
+        padding: 0 10px;
         background-color: transparent;
         color: #ffffff;
         font-size: 15px;
@@ -209,9 +209,13 @@
     }
     
     .loginButton i{
-        font-size: 20px;
+        font-size: 28px;
     }
     
+    .loginButton span{
+        display: none;
+    }
+
     .loginButton:hover{
         background-color: #55575e;
         font-size: 16px;
@@ -313,15 +317,15 @@
         position: fixed;
         z-index: 10;
         background-color: #383a41;
-        height: 70px;
+        height: 80px;
         display: grid;
-        grid-template-columns: 20% 60% 20%;
+        grid-template-columns: 15% 70% 15%;
         align-items: center;
-        padding: 12px 20px;
+        padding: 12px 10px;
     }
     
     .title{
-        padding: 0 0 0 20px;
+        padding: 0 0 0 0;
         font-size: 16px;
     }
     
@@ -335,7 +339,7 @@
     }
     
     .searchForm{
-        padding: 0 20px;
+        padding: 0 10px;
         width: 100%;
         height: 100%;
     }
@@ -348,7 +352,7 @@
         background-color: #4a4e57;
         border-radius: 5px 5px 0 0;
         display: grid;
-        grid-template-columns: 90% 10%;
+        grid-template-columns: 80% 20%;
         width: 100%;
         height: 100%;
         transition: all .1s;
@@ -385,7 +389,7 @@
     }
     
     .searchButton i{
-        font-size: 90%;
+        font-size: 100%;
         transition: all .1s;
     }
     
@@ -489,7 +493,11 @@
     }
     
     .loginButton i{
-        font-size: 20px;
+        font-size: 30px;
+    }
+    
+    .loginButton span{
+        display: none;
     }
     
     .loginButton:hover{
@@ -761,7 +769,7 @@
         text-decoration: none;
         text-align: center;
         font-weight: 900;
-        font-size: 16px;
+        font-size: 10px;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
@@ -769,7 +777,11 @@
     }
     
     .loginButton i{
-        font-size: 20px;
+        font-size: 30px;
+    }
+    
+    .loginButton span{
+        display: none;
     }
     
     .loginButton:hover{
@@ -1052,6 +1064,11 @@
         font-size: 20px;
     }
     
+    .loginButton span{
+        display: flex;
+        font-size: 14px;
+    }
+    
     .loginButton:hover{
         background-color: #55575e;
         font-size: 16px;
@@ -1330,6 +1347,11 @@
     
     .loginButton i{
         font-size: 25px;
+    }
+    
+    .loginButton span{
+        display: flex;
+        font-size: 20px;
     }
     
     .loginButton:hover{
