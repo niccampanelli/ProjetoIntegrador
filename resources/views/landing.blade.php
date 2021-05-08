@@ -7,17 +7,17 @@
     </head>
     <body class="container">
         <header class="header">
-            <h1 class="title">Projeto Integrador</h1>
+            <a href="/" class="title">Projeto Integrador</a>
             <div class="headerMiddle">
                 <form class="searchForm" action="/search" method="GET" role="search">
                     <div class="searchInputDiv">
                         <input class="searchInput" name='search_input' type="search" placeholder="Pesquise títulos de livros aqui..."/>
-                        <button class="searchButton" type="submit"><i class="fas fa-search"></i></button>
+                        <button class="searchButton" type="submit"><i class="fas fa-search" ></i></button>
                     </div>
                 </form>
             </div>
             <div class="headerLast">
-                <a href="login" class="loginButton"><i class="far fa-user-circle"></i><span>Logar ou Cadastrar</span></a>
+                <a href="login" class="loginButton"><i class="far fa-user-circle iconlogin "></i><span>Logar ou Cadastrar</span></a>
             </div>
         </header>
         <section class="centerSection">

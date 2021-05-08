@@ -24,7 +24,7 @@
                 firebase.initializeApp(firebaseConfig);
             </script>
         <header class="header">
-            <h1 class="title">Projeto Integrador</h1>
+            <a href="/" class="title">Projeto Integrador</a>
             <div class="headerMiddle">
                 <form class="searchForm" action="/search" method="GET" role="search">
                     <div class="searchInputDiv">
@@ -40,47 +40,51 @@
         <section class="centerSection">
             <div class="searchContainer">
                 @isset($data)
-                    <div class="searchHeader">
-                        @if (isset($data['query']))
-                            <h2>Livros encontrados com a pesquisa: "{{$data['query']}}" </h2>
-                        @else
-                            <h2>Livros cadastrados na plataforma.</h2>
-                        @endif
-                        <div class="searchOptions">
-                            <button class="searchOrderby" id="searchOrderbyBtn" onclick="displayOrderbyPanel()"><i  class="fas fa-sort-amount-down"></i> Ordenar</button>
-                            <form action="/search" method="GET" id="searchOrderbyWindow">
-                                <input style="display: none" value="{{$data['query']}}" name="search_input">
-                                <div class="searchOrderbyUpper">
-                                    <div class="searchOrderbySection">
-                                        <label>Por</label>
-                                        <ul class="searchOrderbyOptions">
-                                            <li><input id="orderbyTitleRadio" type="radio" value="title" name="order"><label for="orderbyTitleRadio" class="searchOrderbyOptionBtn" id="orderbyTitleLabel">Título</label></li>
-                                            <li><input id="orderbyAuthorRadio" type="radio" value="author" name="order"><label for="orderbyAuthorRadio" class="searchOrderbyOptionBtn" id="orderbyAuthorLabel">Autor</label></li>
-                                            <li><input id="orderbyYearRadio" type="radio" value="create_dt" name="order"><label for="orderbyYearRadio" class="searchOrderbyOptionBtn" id="orderbyYearLabel">Ano</label></li>
-                                        </ul>
+                    @if (count($data['books']) > 0)
+                        <div class="searchHeader">
+                            @if (isset($data['query']))
+                                <h2>Livros encontrados com a pesquisa: "{{$data['query']}}" </h2>
+                            @else
+                                <h2>Livros cadastrados na plataforma.</h2>
+                            @endif
+                            <div class="searchOptions">
+                                <button class="searchOrderby" id="searchOrderbyBtn" onclick="displayOrderbyPanel()"><i  class="fas fa-sort-amount-down"></i> Ordenar</button>
+                                <form action="/search" method="GET" id="searchOrderbyWindow">
+                                    <input style="display: none" value="{{$data['query']}}" name="search_input">
+                                    <div class="searchOrderbyUpper">
+                                        <div class="searchOrderbySection">
+                                            <label>Por</label>
+                                            <ul class="searchOrderbyOptions">
+                                                <li><input id="orderbyTitleRadio" type="radio" value="title" name="order"><label for="orderbyTitleRadio" class="searchOrderbyOptionBtn" id="orderbyTitleLabel">Título</label></li>
+                                                <li><input id="orderbyAuthorRadio" type="radio" value="author" name="order"><label for="orderbyAuthorRadio" class="searchOrderbyOptionBtn" id="orderbyAuthorLabel">Autor</label></li>
+                                                <li><input id="orderbyYearRadio" type="radio" value="create_dt" name="order"><label for="orderbyYearRadio" class="searchOrderbyOptionBtn" id="orderbyYearLabel">Ano</label></li>
+                                            </ul>
+                                        </div>
+                                        <div class="searchOrderbySection">
+                                            <label>Ordem</label>
+                                            <ul class="searchOrderbyOptions">
+                                                <li><input id="orderbyAscRadio" type="radio" value="asc" name="direction"><label for="orderbyAscRadio" class="searchOrderbyOptionBtn" id="orderbyAscLabel">Crescente</label></li>
+                                                <li><input id="orderbyDescRadio" type="radio" value="desc" name="direction"><label for="orderbyDescRadio" class="searchOrderbyOptionBtn" id="orderbyDescLabel">Decrescente</label></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="searchOrderbySection">
-                                        <label>Ordem</label>
-                                        <ul class="searchOrderbyOptions">
-                                            <li><input id="orderbyAscRadio" type="radio" value="asc" name="direction"><label for="orderbyAscRadio" class="searchOrderbyOptionBtn" id="orderbyAscLabel">Crescente</label></li>
-                                            <li><input id="orderbyDescRadio" type="radio" value="desc" name="direction"><label for="orderbyDescRadio" class="searchOrderbyOptionBtn" id="orderbyDescLabel">Decrescente</label></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <button class="searchOrderbyFinish" type="submit">Ordenar</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="searchList">
-                        @foreach ($data['books'] as $b)
-                            <div  class='searchItem'>
-                                <div class="searchItemIcon" style="background-color:{{'#' . str_pad(dechex(mt_rand(0x555555, 0xDDDDDD)), 6, '0', STR_PAD_LEFT)}}" ><i style="color: {{'#' . str_pad(dechex(mt_rand(0xAAAAAA, 0xFFFFFF)), 6, '0', STR_PAD_LEFT)}}"  class="fas fa-book"></i></div>
-                                <span class="searchItemName">{{$b->title}}</span>
-                                <span class="searchItemAuthor">{{ \Illuminate\Support\Str::limit($b->author, 50, $end='...') }}</span>
+                                    <button class="searchOrderbyFinish" type="submit">Ordenar</button>
+                                </form>
                             </div>
-                        @endforeach
-                    </div>
-                    {{$data['books']->links('vendor.pagination.default')}}
+                        </div>
+                        <div class="searchList">
+                            @foreach ($data['books'] as $b)
+                                <div  class='searchItem'>
+                                    <div class="searchItemIcon" style="background-color:{{'#' . str_pad(dechex(mt_rand(0x555555, 0xDDDDDD)), 6, '0', STR_PAD_LEFT)}}" ><i style="color: {{'#' . str_pad(dechex(mt_rand(0xAAAAAA, 0xFFFFFF)), 6, '0', STR_PAD_LEFT)}}"  class="fas fa-book"></i></div>
+                                    <span class="searchItemName">{{$b->title}}</span>
+                                    <span class="searchItemAuthor">{{ \Illuminate\Support\Str::limit($b->author, 50, $end='...') }}</span>
+                                </div>
+                            @endforeach
+                        </div>
+                        {{$data['books']->links('vendor.pagination.default')}}
+                    @else
+                        <h1>Não foi encontrado nenhum livro com a pesquisa: "{{$data['query']}}"</h1>
+                    @endif
                 @endisset
             </div>
         </section>

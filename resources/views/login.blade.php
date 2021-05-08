@@ -30,20 +30,18 @@
             // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
             </script>
-
             <header class="header">
                 <a href="/" class="title">Projeto Integrador</a>
                 <div class="headerMiddle">
-                    <form class="searchForm" action="/search" method="POST" role="search">
-                        @csrf
+                    <form class="searchForm" action="/search" method="GET" role="search">
                         <div class="searchInputDiv">
                             <input class="searchInput" name='search_input' type="search" placeholder="Pesquise títulos de livros aqui..."/>
-                            <button class="searchButton" type="submit"><i class="fas fa-search"></i></button>
+                            <button class="searchButton" type="submit"><i class="fas fa-search" ></i></button>
                         </div>
                     </form>
                 </div>
                 <div class="headerLast">
-                    <a href="login" class="loginButton"><i class="far fa-user-circle"></i> Logar ou Cadastrar</a>
+                    <a href="login" class="loginButton"><i class="far fa-user-circle iconlogin "></i><span>Logar ou Cadastrar</span></a>
                 </div>
             </header>
             <div class="centerSection">
