@@ -31,6 +31,7 @@
     .header{
         width: 100%;
         position: fixed;
+        z-index: 10;
         background-color: #383a41;
         height: 70px;
         display: grid;
@@ -310,6 +311,7 @@
     .header{
         width: 100%;
         position: fixed;
+        z-index: 10;
         background-color: #383a41;
         height: 70px;
         display: grid;
@@ -589,6 +591,7 @@
     .header{
         width: 100%;
         position: fixed;
+        z-index: 10;
         background-color: #383a41;
         height: 70px;
         display: grid;
@@ -868,6 +871,7 @@
     .header{
         width: 100%;
         position: fixed;
+        z-index: 10;
         background-color: #383a41;
         height: 70px;
         display: grid;
@@ -1147,6 +1151,7 @@
     .header{
         width: 100%;
         position: fixed;
+        z-index: 10;
         background-color: #383a41;
         height: 70px;
         display: grid;
