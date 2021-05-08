@@ -74,7 +74,7 @@
                         </div>
                         <div class="searchList">
                             @foreach ($data['books'] as $b)
-                                <div  class='searchItem'>
+                                <div class='searchItem' title="{{$b->title}}">
                                     <div class="searchItemIcon" style="background-color:{{'#' . str_pad(dechex(mt_rand(0x555555, 0xDDDDDD)), 6, '0', STR_PAD_LEFT)}}" ><i style="color: {{'#' . str_pad(dechex(mt_rand(0xAAAAAA, 0xFFFFFF)), 6, '0', STR_PAD_LEFT)}}"  class="fas fa-book"></i></div>
                                     <span class="searchItemName">{{$b->title}}</span>
                                     <span class="searchItemAuthor">{{ \Illuminate\Support\Str::limit($b->author, 50, $end='...') }}</span>
