@@ -8,9 +8,19 @@ CREATE TABLE if not exists livros
 );
 
 CREATE OR REPLACE FUNCTION conferirDados()  RETURNS trigger AS $conferirDados$
+    DECLARE
+    livro_row record;
+
     BEGIN
-        RAISE EXCEPTION 'A tabela foi alterada';
+        SELECT INTO livro_row * from livros as l where l.id = NEW.id;
+
+        IF livro_row.nome = SELECT nome from livros THEN
+           RAISE EXCEPTION 'Um livro com este nome já existe.';
+        END IF;
+
+        RETURN NEW;
     END;
+
 $conferirDados$ LANGUAGE plpgsql;
 
 CREATE TRIGGER assistirTabelas BEFORE INSERT OR UPDATE ON livros
